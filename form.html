@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Registration Form</title>
+</head>
 <body>
 
 <h2>Registration Form</h2>
 
-<form action="/action_page.php">
- fname <input type="text"><br>
- lname <input type="text"><br> 
- id <input type="number"><br>
- password <input type="password"><br>
- department <input type="dropdown" id="dropdown" name="lname" value="Doe"><br><br>
- skills <input type="radio">
- gender <input type="checkbox" id="gender">
-  <select>
-    <option> </option>
-  </select>
- address <input type="address" id="address" name="lname" value="Doe"><br><br>
- email <input type="email" id="email" name="lname" value="Doe"><br><br>
- file <input type="file" id="file" name="lname" value="Doe"><br><br>
- button <input type="button">
- reset <input type="reset">
- submit <input type="submit" value="Submit">
+<form action="/action_page.php" method="post">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+    
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required><br><br>
+    
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="department">Department:</label>
+    <select id="department" name="department">
+        <option value="">Select</option>
+        <option value="cs">Computer Science</option>
+        <option value="ee">Electrical Engineering</option>
+        <option value="me">Mechanical Engineering</option>
+    </select><br><br>
+    
+    <label>Skills:</label><br>
+    <input type="checkbox" id="skill1" name="skills" value="Programming">
+    <label for="skill1">Programming</label>
+    <input type="checkbox" id="skill2" name="skills" value="Data Analysis">
+    <label for="skill2">Data Analysis</label>
+    <input type="checkbox" id="skill3" name="skills" value="AI">
+    <label for="skill3">Artificial Intelligence</label><br><br>
+    
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" name="file"><br><br>
+    
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
 </form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 </body>
 </html>
-
