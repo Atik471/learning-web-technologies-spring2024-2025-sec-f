@@ -5,56 +5,76 @@
 </head>
 <body>
 
-<h2>Registration Form</h2>
-
 <form>
-    <label>First Name:</label>
-    <input type="text"><br><br>
-    
-    <label>Last Name:</label>
-    <input type="text"><br><br>
-    
-    <label>ID:</label>
-    <input type="number"><br><br>
-    
-    <label>Password:</label>
-    <input type="password"><br><br>
-    
-    <label>Department:</label>
-    <select id="department">
-        <option value="">Select</option>
-        <option value="cse">Computer Science and Engineering</option>
-        <option value="eee">Electrical Engineering</option>
-        <option value="me">Pharmacy</option>
-    </select><br><br>
-    
-    <label>Skills:</label><br>
-    <input type="checkbox" value="Programming">
-    <label>Programming</label>
-    <input type="checkbox" value="Data Analysis">
-    <label>Web Developer</label>
-    <input type="checkbox" value="AI">
-    <label>Artificial Intelligence</label><br><br>
-    
-    <label>Gender:</label>
-    <input type="radio"value="male">
-    <label>Male</label>
-    <input type="radio" value="female">
-    <label>Female</label>
-    <input type="radio" value="other">
-    <label>Other</label><br><br>
-    
-    <label>Address:</label>
-    <input type="text"><br><br>
-    
-    <label>Email:</label>
-    <input type="email"><br><br>
-    
-    <label>Upload File:</label>
-    <input type="file"><br><br>
-    
-    <input type="reset" value="Reset">
-    <input type="submit" value="Submit">
+<fieldset>
+<legend> Registration form </legend>
+	<table> 
+		<tr>
+			<td>First Name</td>
+			<td><input type="text" name="fname"><br></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><input type="text" name="lname"><br></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password"><br></td>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td><input type="number" name="id"><br></td>
+		</tr>
+		<tr>
+			<td>Deartment</td>
+			<td><select name="deparment">
+        			<option value="">Select</option>
+        			<option value="cse">Computer Science and Engineering</option>
+        			<option value="eee">Electrical Engineering</option>
+        			<option value="me">Pharmacy</option>
+    			</select><br>
+			</td>
+		</tr>
+		<tr>
+			<td>Skills</td>
+			<td><input type="checkbox" value="Programming">
+    				<label>Programming</label>
+    				<input type="checkbox" value="Data Analysis">
+    				<label>Web Developer</label>
+    				<input type="checkbox" value="AI">
+    				<label>Artificial Intelligence</label><br>
+			</td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>
+    			<input type="radio" name="gender" value="male">
+    			<label>Male</label>
+    			<input type="radio" name="gender" value="female">
+    			<label>Female</label>
+    			<input type="radio" name="gender" value="other">
+    			<label>Other</label><br>
+			</td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><input type="text" name="address"><br></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="email" name="email"><br></td>
+		</tr>
+		<tr>
+			<td>Upload File</td>
+			<td><input type="file"><br></td>
+		</tr>
+		<tr>
+			<td><input type="reset" value="Reset"></td>
+			<td><input type="submit" value="Submit"></td>
+		</tr>
+		
+	</table>
+</fieldset>
 </form> 
 
 </body>
