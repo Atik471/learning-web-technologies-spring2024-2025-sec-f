@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <form onsubmit="return validateEmail()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <p id="error"></p>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateEmail() {
+            let email = document.getElementById('email').value;
+            let error = document.getElementById('error');
+            let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                error.textContent = "Email cannot be empty!";
+                return false;
+            } else if (!regex.test(email)) {
+                error.textContent = "Invalid email format!";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
