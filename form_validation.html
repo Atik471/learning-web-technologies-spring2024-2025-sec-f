@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Name Validation</title>
+</head>
+<body>
+    <form onsubmit="return validateName()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <p id="error"></p>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validateName() {
+            let name = document.getElementById('name').value;
+            let error = document.getElementById('error');
+            let regex = /^[A-Za-z][A-Za-z.-]*\s[A-Za-z.-]+$/;
+            if (name === "") {
+                error.textContent = "Name cannot be empty!";
+                return false;
+            } else if (!regex.test(name)) {
+                error.textContent = "Invalid name format!";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
