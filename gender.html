@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gender Selection Form</title>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            
+            const male = document.getElementById("male").checked;
+            const female = document.getElementById("female").checked;
+            const other = document.getElementById("other").checked;
+            const errorMsg = document.getElementById("error");
+            const successMsg = document.getElementById("success");
+            
+            if (!male && !female && !other) {
+                errorMsg.innerText = "Please select at least one gender option.";
+                successMsg.innerText = "";
+            } else {
+                errorMsg.innerText = "";
+                successMsg.innerText = "Form submitted successfully!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validateForm(event)">
+        <fieldset>
+            <legend>Gender</legend>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+            
+            <p id="error" style="color: red;"></p>
+            <p id="success" style="color: green;"></p>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
